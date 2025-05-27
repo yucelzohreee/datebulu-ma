@@ -50,6 +50,40 @@ button {
   position: relative;
 }
 
+#yes {
+  position: relative;
+  left: -100px; /* Ortada kalsın */
+}
+
 #no {
   position: absolute;
+  left: 1000px;  /* Evet butonunun biraz sağı */
+  top: 30px;
+}
+#hearts-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 999;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  animation: floatHeart 2s linear forwards;
+  color: pink;
+}
+
+@keyframes floatHeart {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-300px) scale(1.5);
+  }
 }
